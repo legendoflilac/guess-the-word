@@ -45,9 +45,7 @@ h1 {
   width: 90%;
 }
 
-.hide {
-  display: none;
-}
+
 
 .highlight {
   padding: 0.25em;
@@ -134,6 +132,9 @@ input:focus {
   color: white;
 }
 
+.hide {
+  display: none;
+}
 /* animatied background */
 .win {
   padding: 0 1em;
