@@ -120,7 +120,7 @@ const countGuessesRemaining = function(guess) {
 const checkPlayerWin = function() {
     if (wordInProgress.innerText === word.toUpperCase()) {
         message.classList.add("win")
-        message.innerHTML = `<p class="highlight">You guessed correct the word! Congrats!</p>`
+        message.innerHTML = `<p class="highlight">You guessed the correct word! Congrats!</p>`
         startOver();
     }
 };
