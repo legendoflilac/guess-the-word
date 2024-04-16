@@ -29,7 +29,6 @@ const placeholder = function(word) {
     array.forEach(function(letter, index) {
         array[index] = "●"
     })
-    //console.log(array);
     wordInProgress.innerText = array.join("");
 };
 
@@ -71,7 +70,6 @@ const makeGuess = function(letter) {
         updateGuessedLetters();
         updateWordInProgress(guessedLetters);
     }
-    //console.log(guessedLetters);
 };
 
 const updateGuessedLetters = function() {
@@ -88,9 +86,6 @@ const updateWordInProgress = function(guessedLetters) {
     const wordArray = wordUpper.split("");
     wordArray.forEach(function(letter,index){
         if (guessedLetters.includes(letter)) {
-        /*console.log("we got here");
-        console.log("index",index);
-        console.log("Inner text of WordInProgress", wordInProgress.innerText);*/
         const splitWordInProgress = wordInProgress.innerText.split("")
         splitWordInProgress.splice(index, 1, letter);
         wordInProgress.innerText = splitWordInProgress.join("");
@@ -123,7 +118,6 @@ const countGuessesRemaining = function(guess) {
 }
 
 const checkPlayerWin = function() {
-    //console.log("word in Progress", wordInProgress.innerText, "word", word.toUpperCase())
     if (wordInProgress.innerText === word.toUpperCase()) {
         message.classList.add("win")
         message.innerHTML = `<p class="highlight">You guessed correct the word! Congrats!</p>`
